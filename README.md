@@ -7,10 +7,10 @@ working directory	||	staging area	|| Local repo 	|| 	remote repo
 									 git pull		 git fetch
 
 https://ohshitgit.com/
-#########################################
-###################
-#generate & test public key
-# Generate Key
+
+
+# generate & test public key
+## Generate Key
 ssh-keygen -t rsa -b 4096 -C "Your GitHub Email Here"
 
 # Get Key To Copy
@@ -22,19 +22,11 @@ cat C:/Users/elmog/.ssh/id_rsa.pub
 # Test Key And Connection
 ssh -T git@github.com
 
-#############################
-#############################
-#############################
-
-###################
-#.gitignore & Show All Configurations
+# .gitignore & Show All Configurations
 *.log
 !vip.log
 node_packs/
 text.txt
-
-#Show All Configurations
-git help config
 
 # Show User Email
 git config --global user.email
@@ -49,48 +41,31 @@ git config --global --edit
 touch "File Name Here"
 
 
-#########################
-#########################
-#########################
-#########################
-install github cli for cmd line
+# install github cli for cmd line
 
-
-
-###basics
-###create a new repository on the command line
-#create readme file
-echo "# {Repo Name}" >> README.md
+# basics
+## create a new repository on the command line
 # Initialize & create Empty Git Repository
+touch README.md
 git init
-#add files intended to be commited
 git add *
-#commit to local repo
+# commit to local repo
 git commit -m "first commit"
-#create main/master branch
+# change main/master branch name to main instead of master "optional"
 git branch -M main
-#create repo on my github
-gh repo create css-refresher --public
-#specify the origin as a target remote
-git remote add origin https://github.com/elmoghany/css-refresher.git
+# create repo on my github
+gh repo create <repo-name> --public
+# specify the origin as a target remote
+git remote add origin https://github.com/elmoghany/<repo-name>.git
 Or
 git remote set-url origin git@github.com:elmoghany/css-refresher.git
-#debug addition status of git remote in case of failure
+# debug addition status of git remote in case of failure "optional"
 git remote -v
-#upload to my new repo
+# upload to my new repo
 git push -u origin main
 
-#############################
-#############################
-#############################
-#cloning a project from git
-#clone
+# cloning a project from git
 git clone https:// ...
-
-# Create Empty File
-touch "Your File Name Here"
-
-######
 
 # Add Files
 git add <File> <File>
@@ -100,7 +75,7 @@ git add *
 # Show Status
 git status
 
-#remove things added by git add
+# remove things added by git add
 git reset
 git reset <file>
 
@@ -112,7 +87,7 @@ git log tofile
 git commit -m "Your Commit Message Here"
 git commit --amend	#modify latest commit instead of new one
 
-#set the remote repo you wroking with
+# set the remote repo you wroking with
 git branch --set-upstream-to <origin>
 
 # Add Repository
@@ -134,7 +109,6 @@ git pull <repo> <branch>
 
 git fetch	#does not do any change ... only get changes
 git pull does the change
-#################
 
 # Show All Tags
 git tag
@@ -169,8 +143,7 @@ git merge "Branch Name You Need To Merge"
 # Switch To Branch
 git checkout "Branch Name"
 
-###################
-####branches
+# branches
 # Show Log File
 git log
 
@@ -199,16 +172,14 @@ git branch -m "New Branch Name"
 # Merge Branch With Current Branch
 git merge "Branch Name You Need To Merge"
 
-###################
-#delete
+# delete
 # Show Files That Will Be Cleaned
 git clean -n
 
 # Remove Un Needed Files
 git clean -f
 
-###################
-#stash
+# stash
 # Create Text File With "Hello World" String Inside It
 echo "Hello World" > about_readme.txt
 
