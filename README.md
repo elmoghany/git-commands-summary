@@ -54,9 +54,9 @@ git commit -m "first commit"
 # change main/master branch name to main instead of master "optional"
 git branch -M main
 # create repo on my github
-gh repo create <repo-name> --public
+gh repo create "repo-name" --public
 # specify the origin as a target remote
-git remote add origin https://github.com/elmoghany/<repo-name>.git
+git remote add origin https://github.com/elmoghany/"repo-name".git
 Or
 git remote set-url origin git@github.com:elmoghany/css-refresher.git
 # debug addition status of git remote in case of failure "optional"
