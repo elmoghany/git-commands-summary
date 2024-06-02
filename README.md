@@ -3,8 +3,11 @@
 ## create a new repository on the command line
 # Initialize & create Empty Git Repository
 touch README.md
+
 git init
+
 git add *
+
 # commit to local repo
 git commit -m "first commit"
 # change main/master branch name to main instead of master "optional"
