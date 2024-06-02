@@ -1,13 +1,24 @@
-#GIT summary
-working directory	||	staging area	|| Local repo 	|| 	remote repo
-					=>					=>				=>
-				  git add 			git commit 		 git push
-					<=					<=				<=
-				  git reset 						 git pull
-									 git pull		 git fetch
-
-https://ohshitgit.com/
-
+###GIT summary
+# basics
+## create a new repository on the command line
+# Initialize & create Empty Git Repository
+touch README.md
+git init
+git add *
+# commit to local repo
+git commit -m "first commit"
+# change main/master branch name to main instead of master "optional"
+git branch -M main
+# create repo on my github
+gh repo create "repo-name" --public
+# specify the origin as a target remote
+git remote add origin https://github.com/elmoghany/"repo-name".git
+Or
+git remote set-url origin git@github.com:elmoghany/css-refresher.git
+# debug addition status of git remote in case of failure "optional"
+git remote -v
+# upload to my new repo
+git push -u origin main
 
 # generate & test public key
 ## Generate Key
@@ -43,26 +54,7 @@ touch "File Name Here"
 
 # install github cli for cmd line
 
-# basics
-## create a new repository on the command line
-# Initialize & create Empty Git Repository
-touch README.md
-git init
-git add *
-# commit to local repo
-git commit -m "first commit"
-# change main/master branch name to main instead of master "optional"
-git branch -M main
-# create repo on my github
-gh repo create "repo-name" --public
-# specify the origin as a target remote
-git remote add origin https://github.com/elmoghany/"repo-name".git
-Or
-git remote set-url origin git@github.com:elmoghany/css-refresher.git
-# debug addition status of git remote in case of failure "optional"
-git remote -v
-# upload to my new repo
-git push -u origin main
+
 
 # cloning a project from git
 git clone https:// ...
@@ -227,3 +219,13 @@ git clean -n
 
 # Remove Un Needed Files
 git clean -f
+
+
+working directory	||	staging area	|| Local repo 	|| 	remote repo
+					=>					=>				=>
+				  git add 			git commit 		 git push
+					<=					<=				<=
+				  git reset 						 git pull
+									 git pull		 git fetch
+
+https://ohshitgit.com/
