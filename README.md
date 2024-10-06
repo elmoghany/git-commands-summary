@@ -1,4 +1,21 @@
-###GIT summary
+# GIT summary
+### creating a new repo
+```
+git init
+git add *
+git commit -m "first commit"
+gh repo create master-name --public
+git remote add origin git-link
+git push --set-upstream origin master
+gh repo edit --description "description here"
+Title: on 1st line "# title here" followed by empty new line
+Links: [Streamlit](https://bear96-cyclegan-vangogh-app-kimcyr.streamlit.app/)
+code : ```code here```
+code : `code here`
+2nd F: "## 2nd font size"
+3rd F: "### 3rd font size"
+Pic  : ![hidden text](/"location of image.*")
+```
 # basics
 ## create a new repository on the command line
 
